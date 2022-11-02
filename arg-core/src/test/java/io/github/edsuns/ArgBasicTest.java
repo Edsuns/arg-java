@@ -17,6 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ArgBasicTest {
 
     @Test
+    void staticOfMethods() {
+        assertTrue(Arg.of(null, "just an error").isError());
+        assertFalse(Arg.of(1, "just an error").isError());
+        assertThrows(NullPointerException.class, () -> Arg.of(1, null));
+    }
+
+    @Test
     void errorObj() {
         Obj<Integer> obj = Obj.error(TestErr.INTERNAL_ERROR);
         assertTrue(obj.isError());
@@ -24,6 +31,10 @@ public class ArgBasicTest {
         assertThrows(ArgException.class, obj::unwrap);
         assertThrows(ArgException.class, () -> obj.map(String::valueOf).unwrap());
         assertThrows(ArgException.class, () -> obj.map(String::valueOf).unwrap());
+
+        Arg<Integer, String> flatMap = obj.flatMap(val -> Arg.of(1, "string err"), "just err");
+        assertTrue(flatMap.isError());
+        assertEquals("just err", flatMap.getError());
 
         assertThrows(IllegalStateException.class,
             () -> obj.map(String::valueOf, "mapped error")
