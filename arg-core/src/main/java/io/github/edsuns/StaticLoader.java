@@ -8,7 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * Created by Edsuns@qq.com on 2022/10/30.
+ * @author edsuns@qq.com
+ * @date 2022/10/30
  */
 class StaticLoader<T> {
 

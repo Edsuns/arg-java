@@ -9,7 +9,8 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
- * Created by Edsuns@qq.com on 2022/10/29.
+ * @author edsuns@qq.com
+ * @date 2022/10/29
  */
 public class ObjResponseBodyAdvice implements ResponseBodyAdvice<Object> {
 

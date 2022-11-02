@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
- * Created by Edsuns@qq.com on 2022/10/30.
+ * @author edsuns@qq.com
+ * @date 2022/10/30
  */
 @SpringBootApplication
 public class ObjResponseBodyApp {

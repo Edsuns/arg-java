@@ -3,7 +3,8 @@ package io.github.edsuns;
 import org.springframework.http.HttpStatus;
 
 /**
- * Created by Edsuns@qq.com on 2022/10/30.
+ * @author edsuns@qq.com
+ * @date 2022/10/30
  */
 public abstract class RequestErr extends ErrorTrace {
 

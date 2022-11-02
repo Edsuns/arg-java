@@ -8,7 +8,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 
 /**
- * Created by Edsuns@qq.com on 2022/10/29.
+ * @author edsuns@qq.com
+ * @date 2022/10/29
  */
 public class ErrorTraceStdDeserializer extends StdDeserializer<ErrorTrace> {
 

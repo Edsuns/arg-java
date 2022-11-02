@@ -8,7 +8,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
- * Created by Edsuns@qq.com on 2022/10/29.
+ * @author edsuns@qq.com
+ * @date 2022/10/29
  */
 @JsonSerialize(using = ErrorTraceStdSerializer.class)
 @JsonDeserialize(using = ErrorTraceStdDeserializer.class)
