@@ -123,7 +123,7 @@ public class Arg<T, E> implements Serializable {
         }
     }
 
-    public <U> Arg<U, E> flatMap(Function<? super T, Arg<U, E>> mapper) {
+    public <U, X extends Arg<U, E>> X flatMap(Function<? super T, X> mapper) {
         requireNonNull(mapper);
         if (isError()) {
             return this.cast();
